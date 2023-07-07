@@ -4,9 +4,12 @@ Use mypy to validate the following piece of code
 and apply any necessary changes.
 """
 
+
 from typing import Tuple, Any, List
 
+
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """Returns a list type"""
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
