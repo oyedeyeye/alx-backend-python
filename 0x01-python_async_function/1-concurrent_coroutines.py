@@ -26,4 +26,4 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     #             min_Num = i
     #     sorted_list.append(min_Num)
     #     delays.remove(min_Num)
-    return sorted_list
+    return sorted(delays)
