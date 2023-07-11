@@ -15,10 +15,5 @@ async def measure_runtime() -> float:
     """Return total run time"""
     start = time.perf_counter()
     # Schedule 4 calls concurrently
-    await asyncio.gather(
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-    )
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
     return time.perf_counter() - start
